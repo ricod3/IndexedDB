@@ -35,7 +35,30 @@ function remove() {
     }
 }
 
-// function for displaying data on the browser / UI
+function update() {
+    let id = prompt("Bitte geben Sie die ID des Datensatzes ein, den Sie ändern möchten:");
+    let x = db.transaction(['languages'], 'readwrite');
+    let store = x.objectStore('languages');
+    let request = store.get(Number(id));
+    request.onsuccess = function(event) {
+        let data = event.target.result;
+        if (data) {
+            let newName = prompt("Bitte geben Sie den neuen Namen ein:", data.name);
+            let newDescription = prompt("Bitte geben Sie die neue Beschreibunng ein:", data.description);
+            let updatedData = {name: newName, description: newDescription, id: Number(id)};
+            store.put(updatedData, Number(id));
+            x.oncomplete = function() { displayData(); }
+        } else {
+            alert("Kein Datensatz mit der angegebenen ID gefunden.");
+        }
+    }
+    request.onerror = function(event) {
+        alert('error getting data ' + event.target.errorCode);
+    }
+}
+
+
+// function for displaying data in the browser / UI
 function displayData() {
     let x = db.transaction(['languages'],  'readonly');
     let store = x.objectStore('languages');
