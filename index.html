@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>IndexedDB - Programmiersprachen</title>
+</head>
+<body>
+<div class="container py-4 h-100">
+    <div class="card mb-6" style="border-radius: 1rem; border: none">
+        <div class="row g-0 d-flex justify-content-center align-items-center p-4">
+            <div class="col-md-6 col-lg-7 d-flex flex-column align-items-center">
+                <h1>CRUD mit IndexedDB</h1>
+                <input class="form-control" id="name" type="text" placeholder="Name">
+                <p></p>
+                <input class="form-control" id="description" type="text" placeholder="Beschreibung">
+                <p></p>
+                <div class="d-flex justify-content-around">
+                    <form action="">
+                        <button type="button" class="btn btn-outline-primary" onclick="add()">Hinzufügen</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="update()">Aktualisieren</button>
+                        <button type="button" class="btn btn-outline-danger" onclick="remove()">Löschen</button>
+                    </form>
+                </div>
+                <p></p>
+                <table id="table">
+                    <tr>
+                        <th>Programmiersprache</th>
+                        <th>Beschreibung</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

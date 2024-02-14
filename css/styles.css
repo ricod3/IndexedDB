@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(1, 42, 74);
+    background: linear-gradient(0deg, rgb(1, 32, 56) 16%, rgb(30, 77, 105) 89%);
+}
+
+h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#3d9d6d, #308fb0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
