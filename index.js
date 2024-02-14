@@ -25,6 +25,16 @@ function add() {
     }
 }
 
+function remove() {
+    let x = db.transaction(['languages'], 'readwrite');
+    let store = x.objectStore('languages');
+    store.clear();
+    x.oncomplete = function () {displayData();}
+    x.onerror = function (event) {
+        alert('error storing note' + event.target.errorCode);
+    }
+}
+
 // function for displaying data on the browser / UI
 function displayData() {
     let x = db.transaction(['languages'],  'readonly');
