@@ -25,13 +25,34 @@ function add() {
     }
 }
 
-function remove() {
+function removeAll() {
     let x = db.transaction(['languages'], 'readwrite');
     let store = x.objectStore('languages');
     store.clear();
     x.oncomplete = function () {displayData();}
     x.onerror = function (event) {
         alert('error storing note' + event.target.errorCode);
+    }
+}
+
+function remove() {
+    let id = prompt("Bitte geben Sie die ID des Datensatzes ein, den Sie löschen möchten: ");
+    let x = db.transaction(['languages'], 'readwrite');
+    let store = x.objectStore('languages');
+    let request = store.get(Number(id));
+    request.onsuccess = function (event) {
+        let data = event.target.result;
+        if (data) {
+            let removeData = {id:Number(id)};
+            store.clear(removeData, Number(id));
+            x.oncomplete = function () {displayData();}
+        }
+        else {
+            alert("Kein Datensatz mit der angegebenen ID gefundenn!")
+        }
+    }
+    request.onerror = function (event) {
+        alert('error getting data ' + event.target.errorCode);
     }
 }
 
