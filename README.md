@@ -11,7 +11,7 @@ This web application was developed as part of the Coders.Bay training program in
 
 ## Technologies Used
 
-![HTML5_logo_and_wordmark svg](https://github.com/ricod3/IndexedDB/assets/113040547/1a443e18-00ee-4192-ae4b-11d8eb2fc145)
+<img src="https://github.com/ricod3/IndexedDB/assets/113040547/1a443e18-00ee-4192-ae4b-11d8eb2fc145" alt="HTML5 Logo" width="50" height="50">
 - **HTML5**: Used for structuring the content of the web page.
 
 ![JavaScript-logo](https://github.com/ricod3/IndexedDB/assets/113040547/3b25bfaf-7bfd-4473-bc4a-695f3a96bc70)
