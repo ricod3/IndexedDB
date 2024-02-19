@@ -12,12 +12,15 @@ This web application was developed as part of the Coders.Bay training program in
 ## Technologies Used
 
 <img src="https://github.com/ricod3/IndexedDB/assets/113040547/1a443e18-00ee-4192-ae4b-11d8eb2fc145" alt="HTML5 Logo" width="50" height="50">
+
 - **HTML5**: Used for structuring the content of the web page.
 
-![JavaScript-logo](https://github.com/ricod3/IndexedDB/assets/113040547/3b25bfaf-7bfd-4473-bc4a-695f3a96bc70)
+<img src="https://github.com/ricod3/IndexedDB/assets/113040547/3b25bfaf-7bfd-4473-bc4a-695f3a96bc70" alt="JavaScript Logo" width="50" height="50">
+
 - **JavaScript**: Used for providing the functionality of the web application.
   
-![bootstrap](https://github.com/ricod3/IndexedDB/assets/113040547/b647b135-c831-43bb-a513-38c8bbbdffb1)
+<img src="https://github.com/ricod3/IndexedDB/assets/113040547/b647b135-c831-43bb-a513-38c8bbbdffb1" alt="Bootstrap Logo" width="50" height="50">
+
 - **Bootstrap**: A CSS framework used for designing the layout and appearance of the web page.
 - **IndexedDB**: A low-level API for client-side storage of significant amounts of structured data, including files/blobs.
 
