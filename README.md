@@ -1,4 +1,4 @@
-# Web Application for Programming Languages CRUD Operations
+# Small Web Application for a showcase of CRUD Operations in IndexedDB
 
 This web application was developed as part of the Coders.Bay training program in Linz. It allows users to perform CRUD (Create, Read, Update, Delete) operations on programming languages. The data is stored in the browser's IndexedDB and displayed on the webpage.
 
