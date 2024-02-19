@@ -3,6 +3,7 @@ let request = indexedDB.open('myDatabse', 1);
 request.onupgradeneeded = function (event) {
     db = event.target.result;
     let languages = db.createObjectStore('languages', {autoIncrement: true});
+    let newObjectStore = db.createObjectStore('newObjectStore', {autoIncrement: true});
 }
 
 request.onsuccess = function (event) {
