@@ -1,12 +1,12 @@
-let db;
+let idb;
 let request = indexedDB.open('myDatabse', 1);
 request.onupgradeneeded = function (event) {
-    db = event.target.result;
-    let languages = db.createObjectStore('languages', {autoIncrement: true});
+    idb = event.target.result;
+    let languages = idb.createObjectStore('languages', {autoIncrement: true});
 }
 
 request.onsuccess = function (event) {
-    db = event.target.result;
+    idb = event.target.result;
     displayData();
 }
 request.onerror = function (event) {
@@ -15,14 +15,14 @@ request.onerror = function (event) {
 
 // start a readwrite transaction and reference object store 'languages'
 function startReadWriteTransaction() {
-    let transaction = db.transaction(['languages'], 'readwrite');
+    let transaction = idb.transaction(['languages'], 'readwrite');
     let store = transaction.objectStore('languages');
     return {transaction, store};
 }
 
 // start a readonly transaction and reference object store 'languages'
 function startReadOnlyTransaction() {
-    let transaction = db.transaction(['languages'], 'readonly');
+    let transaction = idb.transaction(['languages'], 'readonly');
     let store = transaction.objectStore('languages');
     return {transaction, store};
 }
