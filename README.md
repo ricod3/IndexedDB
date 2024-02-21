@@ -17,7 +17,6 @@ This web application was developed as part of the Coders.Bay training program in
   
 <img src="https://github.com/ricod3/IndexedDB/assets/113040547/b647b135-c831-43bb-a513-38c8bbbdffb1" alt="Bootstrap Logo" width="30" height="30"> - **Bootstrap**: A CSS framework used for designing the layout and appearance of the web page.
 
-<img src="https://github.com/ricod3/IndexedDB/img/bootstrap-logo.png" alt="Bootstrap Logo" width="30" height="30">
 - **IndexedDB**: A low-level API for client-side storage of significant amounts of structured data, including files/blobs.
 
 ## Presentation
